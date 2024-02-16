@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #6185f8;
+    /* background-color: black; */
+    overflow: hidden;
+    /* background-color: green; */
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#scorecount {
+    color: white;
+    font-size: xx-large;
+
+}
+
+.brick {
+    position: absolute;
+    bottom: 0;
+    /* width: 100vh; */
+}
+
+.road {
+    width: 100vw;
+    height: 55vh;
+    /* mar */
+}
+
+.gameover {
+    background-image: url(images/firenew.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    visibility: hidden;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 40vh;
+    left: 60%;
+    margin-left: -25%;
+    /* text-align: center; */
+    font-weight: bold;
+    font-size: 6rem;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.303);
+
+
+}
+
+.gameoveranimate {
+    animation: rotategameover 1s linear;
+
+}
+
+.standingPerson {
+    position: absolute;
+    bottom: 10vh;
+    left: 20%;
+    z-index: 2;
+}
+
+.cloud1 {
+    position: absolute;
+    right: -500px;
+
+}
+
+.cloud1animation {
+    animation: cloudrun1 2s linear infinite;
+
+}
+
+.cloud2 {
+    position: absolute;
+    right: -500px;
+}
+
+.cloud2animation {
+    animation: cloudrun2 2s linear infinite;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes cloudrun1 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-2500px, 0px);
+    }
+}
+
+@keyframes cloudrun2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-2500px, 0px);
+    }
+}
+
+.animal {
+    position: absolute;
+    right: -180px;
+    bottom: 17vh;
+    z-index: 2;
+    /* animation: goombaMovement 1s linear infinite; */
+
+}
+
+.restart {
+    position: absolute;
+    right: 10px;
+    background-color: darkblue;
+    color: white;
+    top: 10px;
+
+    /* border-radius: 40px; */
+
+
+}
+
+
+.animation {
+    animation: goombaMovement 1.2s linear infinite;
+
+}
+
+/*  .dragonAnimal
+{
+    position: absolute;
+    right: -220px;
+    bottom: 16vh;   
+    animation: dragonMovement 3s linear infinite;
+    animation-delay: 15s;
+} */
+
+
+@keyframes goombaMovement {
+    0% {
+        transform: translate(0px, 0px);
+        /* left:100vw; */
+    }
+
+    100% {
+        transform: translate(-2000px, 0px);
+        /* left: -10vw; */
+    }
+}
+
+
+.jumpMario {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+
+    100%,
+    0% {
+        transform: translate(0px, 0px);
+
+    }
+
+    50% {
+        transform: translate(0px, -300px);
+
+    }
+}
+
+
+/* .brick {
+    border-top: 10px solid green;
+    position: absolute;
+    bottom: 0;
+    
+
+}
+
+.brickwork {
+    width: 100vw;
+    height: 20vh;
+    /* mar */
+.hidden {
+    display: none;
+}
+
+@keyframes rotategameover {
+    0% {
+        transform: translate(0px, -500px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+
+    }
+
+}
